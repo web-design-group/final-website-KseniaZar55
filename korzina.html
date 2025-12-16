@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="style2.css">
+<title>Bootstrap demo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Категории</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="#" class="btn btn-link text-dark me-3">
+                        <i class="bi bi-search fs-5"></i>
+                    </a>
+                    <a href="#" class="btn btn-link text-dark me-3">
+                        <i class="bi bi-heart fs-5"></i>
+                    </a>
+                    <a href="#" class="btn btn-link text-dark position-relative">
+                        <i class="bi bi-cart3 fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-5 flex-grow-1">
+    <h1 class="mb-4">Корзина</h1>
+
+    <div id="cart-container">
+
+        <div class="card mb-3 cart-item" data-id="1" data-price="1899">
+            <div class="row g-0">
+                <div class="col-md-2 col-4 d-flex align-items-center justify-content-center p-3">
+                    <img src="tint.png" class="img-fluid rounded product-img" alt="Тинт">
+                </div>
+                <div class="col-md-8 col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Тинт</h5>
+
+                        <div class="d-flex align-items-center">
+                            <div class="btn-group quantity-control me-3" role="group">
+                                <button type="button" class="btn btn-outline-secondary decrease-btn">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <button type="button" class="btn btn-light" disabled>
+                                    <span class="quantity fw-bold">2</span>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary increase-btn">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+                            
+                            <span class="item-total fw-bold me-3">3798 ₽</span>
+
+                            <button type="button" class="btn btn-outline-danger btn-sm remove-btn">
+                                <i class="bi bi-trash"></i> Удалить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 cart-item" data-id="2" data-price="3799">
+            <div class="row g-0">
+                <div class="col-md-2 col-4 d-flex align-items-center justify-content-center p-3">
+                    <img src="mackara.png" class="img-fluid rounded product-img" alt="Тушь">
+                </div>
+                <div class="col-md-8 col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Тушь</h5>
+                        <p class="card-text price mb-2">3799 ₽</p>
+                        
+                        <div class="d-flex align-items-center">
+                            <div class="btn-group quantity-control me-3" role="group">
+                                <button type="button" class="btn btn-outline-secondary decrease-btn">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <button type="button" class="btn btn-light" disabled>
+                                    <span class="quantity fw-bold">1</span>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary increase-btn">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+                            
+                            <span class="item-total fw-bold me-3">3799 ₽</span>
+                            
+                            <button type="button" class="btn btn-outline-danger btn-sm remove-btn">
+                                <i class="bi bi-trash"></i> Удалить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 cart-item" data-id="3" data-price="3799">
+            <div class="row g-0">
+                <div class="col-md-2 col-4 d-flex align-items-center justify-content-center p-3">
+                    <img src="rumana.png" class="img-fluid rounded product-img" alt="Румяна">
+                </div>
+                <div class="col-md-8 col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Румяна</h5>
+                        <p class="card-text price mb-2">3799 ₽</p>
+                        
+                        <div class="d-flex align-items-center">
+                            <div class="btn-group quantity-control me-3" role="group">
+                                <button type="button" class="btn btn-outline-secondary decrease-btn">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <button type="button" class="btn btn-light" disabled>
+                                    <span class="quantity fw-bold">1</span>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary increase-btn">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+                            
+                            <span class="item-total fw-bold me-3">3799 ₽</span>
+                            
+                            <button type="button" class="btn btn-outline-danger btn-sm remove-btn">
+                                <i class="bi bi-trash"></i> Удалить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="empty-cart-message" class="text-center py-5" style="display: none;">
+        <i class="bi bi-cart-x empty-cart-icon mb-3"></i>
+        <h3 class="text-muted">Ваша корзина пуста</h3>
+        <p class="text-muted mb-4">Добавьте товары из каталога</p>
+        <a href="#" class="btn btn-primary">
+            <i class="bi bi-bag me-2"></i>Перейти в каталог
+        </a>
+    </div>
+
+    <div class="total-section">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h4 class="mb-2">Итого:</h4>
+                <h2 id="total-price" class="text-danger">11396 ₽</h2>
+            </div>
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                <button class="pay-btn btn btn-lg shadow">
+                    <i class="bi bi-credit-card me-2"></i>Оплатить заказ
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer py-4 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 mb-3 mb-md-0">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="col-md-5">
+                <h5 class="mb-3">КОНТАКТЫ</h5>
+                <p class="mb-1">
+                    <i class="bi bi-telephone me-2"></i>79042316647
+                </p>
+                <p class="mb-0">
+                    <i class="bi bi-envelope me-2"></i>The_blush_room@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateTotal();
+        setupEventListeners();
+    });
+
+    function updateTotal() {
+        let total = 0;
+        const cartItems = document.querySelectorAll('.cart-item');
+        
+        cartItems.forEach(item => {
+            const quantity = parseInt(item.querySelector('.quantity').textContent);
+            const price = parseInt(item.getAttribute('data-price'));
+            const itemTotal = quantity * price;
+
+            item.querySelector('.item-total').textContent = itemTotal + ' ₽';
+            total += itemTotal;
+        });
+
+        document.getElementById('total-price').textContent = total + ' ₽';
+
+        const totalItems = Array.from(cartItems).reduce((sum, item) => {
+            return sum + parseInt(item.querySelector('.quantity').textContent);
+        }, 0);
+        
+        const cartBadge = document.querySelector('.badge');
+        if (cartBadge) {
+            cartBadge.textContent = totalItems;
+        }
+ 
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const totalSection = document.querySelector('.total-section');
+        
+        if (cartItems.length === 0) {
+            emptyCartMessage.style.display = 'block';
+            totalSection.style.display = 'none';
+        } else {
+            emptyCartMessage.style.display = 'none';
+            totalSection.style.display = 'block';
+        }
+    }
+
+    function setupEventListeners() {
+
+        document.querySelectorAll('.increase-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const quantityElement = this.closest('.btn-group').querySelector('.quantity');
+                let quantity = parseInt(quantityElement.textContent);
+                quantityElement.textContent = quantity + 1;
+                updateTotal();
+            });
+        });
+        
+        document.querySelectorAll('.decrease-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const quantityElement = this.closest('.btn-group').querySelector('.quantity');
+                let quantity = parseInt(quantityElement.textContent);
+                if (quantity > 1) {
+                    quantityElement.textContent = quantity - 1;
+                    updateTotal();
+                }
+            });
+        });
+        
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+                const cartItem = this.closest('.cart-item');
+
+                modal.show();
+
+                document.getElementById('confirmDeleteBtn').onclick = function() {
+                    cartItem.remove();
+                    updateTotal();
+                    modal.hide();
+                    showToast('Товар удален из корзины');
+                };
+            });
+        });
+
+        document.querySelector('.pay-btn').addEventListener('click', function() {
+            const total = document.getElementById('total-price').textContent;
+
+            const modal = new bootstrap.Modal(document.getElementById('paymentModal'));
+
+            document.getElementById('paymentAmount').textContent = total;
+
+            modal.show();
+            
+            document.getElementById('confirmPaymentBtn').onclick = function() {
+                modal.hide();
+                showToast('Оплата прошла успешно! Спасибо за заказ!', 'success');
+                
+                setTimeout(() => {
+                    document.querySelectorAll('.cart-item').forEach(item => item.remove());
+                    updateTotal();
+                }, 2000);
+            };
+        });
+    }
+    
+    function showToast(message, type = 'info') {
+
+        let toastContainer = document.getElementById('toast-container');
+        if (!toastContainer) {
+            toastContainer = document.createElement('div');
+            toastContainer.id = 'toast-container';
+            toastContainer.className = 'position-fixed bottom-0 end-0 p-3';
+            toastContainer.style.zIndex = '1050';
+            document.body.appendChild(toastContainer);
+        }
+        
+        const toastId = 'toast-' + Date.now();
+        const toast = document.createElement('div');
+        toast.className = `toast align-items-center text-bg-${type === 'success' ? 'success' : 'warning'} border-0`;
+        toast.id = toastId;
+        toast.setAttribute('role', 'alert');
+        toast.setAttribute('aria-live', 'assertive');
+        toast.setAttribute('aria-atomic', 'true');
+        
+        toast.innerHTML = `
+            <div class="d-flex">
+                <div class="toast-body">
+                    ${message}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        `;
+        
+        toastContainer.appendChild(toast);
+
+        const bsToast = new bootstrap.Toast(toast, {
+            autohide: true,
+            delay: 3000
+        });
+        bsToast.show();
+
+        toast.addEventListener('hidden.bs.toast', function() {
+            toast.remove();
+        });
+    }
+</script>
+
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Подтверждение удаления</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Вы уверены, что хотите удалить этот товар из корзины?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="paymentModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Подтверждение оплаты</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Сумма к оплате: <strong id="paymentAmount">0 ₽</strong></p>
+                <p>Подтвердите оплату заказа.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-success" id="confirmPaymentBtn">Оплатить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
